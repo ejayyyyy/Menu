@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com.css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --main-color: #747AE0;
+    --secondary-color: #F66A83;
+    --third-color: #4EFFB7;
+    --main-light-color: #E1E1EF;
+    --background-white: #F6F5FA;
+    --text-gray: #808B98;
+    --text-black: #353849;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*=============== Sidebar ===============*/
+.sidebar {
+    width: 345px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--text-black);
+    overflow-x: hidden;
+    transition: all 0.5s ease
+}
+
+.sidebar.collapse {
+    width: 72px;
+}
+
+/*=============== Sidebar Brand ===============*/
+.sidebar-brand {
+    height: 90px;
+    position: relative;
+}
+
+.sidebar-brand div h2,
+.sidebar-brand div {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-brand div h2.collapse {
+    opacity: 0;
+}
+
+.sidebar-brand span {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+}
+
+.sidebar.collapse .sidebar-brand span {
+    text-align: center;
+}
+
+.sidebar-brand div h2 span:first-child {
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.sidebar-brand div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1.2rem 0rem 2rem;
+}
+
+.sidebar-brand #menu-bar {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+/*=============== Sidebar Menu ===============*/
+.sidebar-menu li {
+    padding-left: 1rem;
+}
+
+.sidebar-menu li a {
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.sidebar-menu li a span:first-child {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.sidebar-menu a.active {
+    border-radius: 2rem 0 0 2rem;
+    background-color: var(--main-color);
+    padding: 1rem 0rem 1rem 1rem;
+    color: var(--text-black);
+}
+
+.sidebar-menu a:hover {
+    color: var(--main-color);
+}
+
+.sidebar-menu li:last-child {
+    position: absolute;
+    bottom: 2rem;
+}
+
+.main-content {
+    margin-left: 345px;
+    transition: all 0.5s ease;
+}
+
+.main-content.collapse {
+    margin-left: 72px;
+}
